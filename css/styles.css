@@ -1,0 +1,141 @@
+
+#Header {
+    background-image: url("../images/background.png");
+    background-size: cover;
+    margin-bottom: 20%;
+}
+
+#Header .rellax {
+    width: 100%;
+    height: 100%;
+}
+
+h1,h2,h3,h4,p {
+    color: aliceblue;
+}
+
+.header-centered {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: Berthold City;
+    src: url("../fonts/Berthold\ City\ Regular.ttf");
+}
+
+@font-face {
+    font-family: Berthold City;
+    src: url("../fonts/Berthold\ City\ Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Berthold City;
+    src: url("../fonts/Berthold\ City\ Bold\ Italic.otf");
+    font-weight: bold;
+    font-style: italic;
+}
+
+#mail-form {
+    text-align: center;
+    font-family: Berthold City;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 15%;
+    padding: 5%;
+}
+
+#mail-form input,textarea {
+   width: 85%;
+   background-color: #222;
+   border-color: #222;
+   color: #5c5c5c;
+   border-style: solid;
+   resize: none;
+   border-radius: 5px;
+   margin-top: 2%;
+   margin-left: 0;
+   margin-right: 0;
+
+   font-size: 110%;
+   font-family: Berthold City;
+}
+
+#mail-form textarea{
+    height: 150px;
+}
+
+#mail-form h1 {
+    font-style: italic;
+    margin-bottom: 0;
+    color:#a1dce6;
+   font-size: 230%;
+
+}
+
+#mail-form #send-button {
+   font-size: 100%;
+   color: #353535;
+   width: 85.5%;
+}
+
+body, html, #Header {
+    margin-top: 0px;
+    margin-left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+}
+
+#Header h1 {
+    color: white;
+    margin-top: 0px;
+    font-size: 500%;
+}
+
+.header-content {
+    width: 100%;
+    position: relative;
+    top: 35%;
+    text-align: center;
+}
+
+.header-menu li{
+    display: inline;
+    text-align: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 200%;
+
+}
+
+.header-menu a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.header-menu{
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+.background-blur {
+   backdrop-filter: blur(10px);
+   width: 100%;
+   height: 100%;
+}
