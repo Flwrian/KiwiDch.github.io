@@ -2,6 +2,7 @@
     background-image: url("../images/background.png");
     background-size: cover;
     margin-bottom: 20%;
+    font-family: Roboto Slab;
 }
 
 #Header .rellax {
@@ -17,6 +18,100 @@ p {
     color: aliceblue;
 }
 
+h1,
+h2,
+h3{
+    font-family: Roboto Slab;
+    font-style: normal;
+    letter-spacing: 1.49px;
+    font-weight: 400;
+}
+
+p{
+    font-family: Source Code Pro;
+    letter-spacing: .4px;
+}
+
+a {
+    font-family: Source Code Pro;
+    letter-spacing: 1px;
+}
+
+#about-me-content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-content:center;
+    justify-content: center;
+}
+
+#profile-img{
+    z-index: -1;
+    max-width: 200px;
+    max-height: 200px;
+    position: relative;
+    top: 45px;
+    margin-right: 5%;
+    transform: scaleX(-1);
+    background-color: #5c5c5c;
+    border-radius: 50%;
+}
+
+.shark{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#sharkpoll-img{
+    max-width: 720px;
+}
+
+.layer-2{
+   width: 100%;
+   z-index: 1;
+}
+
+.shark-object{
+    width: 100%;
+}
+
+#blahaj{
+    max-width: 350px;
+    transform: rotate(125deg);
+    position: absolute;
+    left: 15%;
+    top:900px;
+}
+
+#ballot {
+    max-width: 70px;
+    transform: rotate(-40deg);
+    position: absolute;
+    left: 65%;
+    top:950px;
+}
+
+#text-shark-box{
+    position: absolute;
+    max-width: 350px;
+    padding: 15px;
+    border-radius: 15px;
+    left: 60%;
+    top: 3200px;
+}
+
+#sharkpoll-img-2{
+    position: absolute;
+    max-width: 720px;
+    left: 5%;
+    top: 4250px;
+}
+
+h2{
+    font-size: 300%;
+}
+
 .header-centered {
     display: flex;
     justify-content: center;
@@ -27,21 +122,25 @@ p {
 }
 
 @font-face {
-    font-family: Berthold City;
-    src: url("../fonts/Berthold\ City\ Regular.ttf");
+    font-family: LilGrotesk;
+    src: url("../fonts/LilGrotesk-Regular.otf");
 }
 
 @font-face {
-    font-family: Berthold City;
-    src: url("../fonts/Berthold\ City\ Bold.otf");
+    font-family: LilGrotesk;
+    src: url("../fonts/LilGrotesk-Bold.otf");
     font-weight: bold;
 }
 
 @font-face {
-    font-family: Berthold City;
-    src: url("../fonts/Berthold\ City\ Bold\ Italic.otf");
-    font-weight: bold;
-    font-style: italic;
+    font-family: Source Code Pro;
+    src: url("../fonts/SourceCodePro.ttf");
+}
+
+
+@font-face {
+    font-family: Roboto Slab;
+    src: url("../fonts/RobotoSlab.ttf");
 }
 
 #mail-form {
@@ -51,26 +150,44 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    width: 500px;
+    
+}
+
+#Contact * {
+    font-family: Berthold City; /*a changer parce que c'est payant e nfait putin de merde ca me casse les couilles pourquoi c'est toujrous comme ca j'en ait trop malrre c'est dure le front de merfde la vite il mfaut que je fasse du rust sinoin c'est la merde la àitrjeekf kxzlqksl q quOIUCUOUBEHHHHHH*/
+
+}
+#reponse-mail {
+    margin-top: 0;
+}
+#Contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+    padding-bottom: 5%;
     margin-bottom: 5%;
-    padding: 5%;
+    font-size: 1.3em;
 }
 
 #mail-form input,
 textarea {
-    width: 85%;
+    width: 100%;
     background-color: #222;
     border-color: #222;
     color: #5c5c5c;
-    border-style: solid;
+    border-style: none;
     resize: none;
     border-radius: 5px;
-    margin-top: 2%;
+    margin-top: 10px;
     margin-left: 0;
     margin-right: 0;
-
-    font-size: 110%;
+    padding-left: 5px;
+    font-size: 22px;
     font-family: Berthold City;
 }
 
@@ -80,16 +197,47 @@ textarea {
 
 #mail-form h1 {
     font-style: italic;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 0;
     margin-bottom: 0;
     color: #a1dce6;
-    font-size: 230%;
-
+}
+#mail-fom #mail-letter{
+    margin: 0;
+    padding: 0;
 }
 
 #mail-form #send-button {
-    font-size: 100%;
+    font-size: 85%;
+    height: 25px;
     color: #353535;
-    width: 85.5%;
+    width: 507px;
+}
+
+@media(max-width: 550px){
+    #Contact{
+        font-size: 1.3em;
+    }
+    #mail-form input,textarea{
+        width: 460px;
+    }
+    #mail-form #send-button {
+        width: 467px;
+    }
+}
+
+@media(max-width: 480px){
+    #Contact{
+        font-size: 1.1em;
+    }
+    #mail-form input,textarea{
+        width: 370px;
+    }
+    #mail-form #send-button {
+        width: 377px;
+    }
 }
 
 body,
@@ -99,6 +247,7 @@ html,
     margin-left: 0px;
     width: 100%;
     height: 100%;
+    font-family: Roboto Slab;
 }
 
 body {
@@ -108,13 +257,18 @@ body {
 #Header h1 {
     color: white;
     margin-top: 0px;
-    font-size: 500%;
+    font-size: 700%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0;
 }
+
+
 
 .header-content {
     width: 100%;
     position: relative;
-    top: 35%;
+    top: 33%;
     text-align: center;
 }
 
@@ -146,6 +300,13 @@ body {
     height: 100%;
 }
 
+#AboutMe-anchor{
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -300px;
+}
+
 #AboutMe {
     display: flex;
     align-items: center;
@@ -154,8 +315,8 @@ body {
 }
 
 #presentation {
-    text-align: center;
-    width: 50%;
+    text-align: left;
+    width: 450px;
 }
 
 .network {
@@ -178,7 +339,7 @@ body {
 }
 
 .network .fa-twitter {
-    left: 75%;
+    left: 65%;
     top: 2100px;
 }
 
@@ -302,4 +463,8 @@ i {
     left: 55%;
     top: 400px;
     transform: rotate(23deg); 
+}
+
+html {
+    scroll-behavior: smooth;
 }

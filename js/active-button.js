@@ -1,6 +1,7 @@
 let button = document.getElementById("send-button");
 let text = document.getElementById("area-letter");
 let mail = document.getElementById("mail-letter");
+let reponse = document.getElementById("reponse-mail");
 
 function validateEmail(input) {
 
@@ -18,12 +19,10 @@ function validateEmail(input) {
     if(validateEmail(mail) && text.value.length >= 10){
         button.style.color = "#e2e2e2";
         button.disabled = false;
-        console.log("ok");
     }
     else {
         button.style.color = "#353535";
         button.disabled = true;
-        console.log("non ok");
     }
   }
 
@@ -34,3 +33,22 @@ function validateEmail(input) {
   mail.addEventListener("input", () => {
     update_button(mail);
   })
+
+function send_mail(){
+    emailjs.sendForm('service_w3kior6', 'template_t1zq61g', "#mail-form")
+                    .then(function() {
+                        reponse.innerText = "The message has been sent"
+                        text.value = "";
+                        mail.value = "";
+                        update_button();
+                    }, function(error) {
+                        reponse.innerText = "There was an error, try again"
+                    });
+  }
+
+
+  mail.onkeydown = function(e) {    
+    if (e.isComposing || e.key === 'Enter') {
+      e.preventDefault();
+    }
+  } 

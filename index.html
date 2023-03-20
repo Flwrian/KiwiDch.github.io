@@ -5,6 +5,13 @@
 <head>
     <link href="css/styles.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/858cf22e5a.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/berthold-city" rel="stylesheet">
+    <script type="text/javascript">
+        (function () {
+            emailjs.init('cVQ1LIGXRk7k0RWZt');
+        })();
+    </script>
     <script defer src="js/active-button.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
@@ -19,9 +26,9 @@
                     <div class="header-content">
                         <h1>Elian Ducheyne</h1>
                         <ul class="header-menu">
-                            <li><a href="#AboutMe">About me</a></li>
+                            <li><a href="#AboutMe-anchor">About me</a></li>
                             <li><a href="#Projects">Projects</a></li>
-                            <li><a href="#Skills">Skills</a></li>
+                            <li><a href="files/cv.pdf">Curriculum vitae</a></li>
                             <li><a href="#Contact">Contact</a></li>
                         </ul>
                     </div>
@@ -29,11 +36,13 @@
             </div>
         </div>
     </div>
+    <a id="AboutMe-anchor"></a>
     <div id="AboutMe">
         <div class="rellax network" data-rellax-speed="18">
-            <a href="https://github.com/KiwiDch"><i class="fa-brands fa-github fa-8x"></i></a>
-            <a href="https://www.linkedin.com/in/elian-ducheyne-a1821722b/"><i class="fa-brands fa-linkedin-in fa-8x"></i></a>
-            <a href="https://twitter.com/kiwi_dch"><i class="fa-brands fa-twitter fa-8x"></i></a>
+            <a href="https://github.com/KiwiDch" target="_blank"><i class="fa-brands fa-github fa-8x"></i></a>
+            <a href="https://www.linkedin.com/in/elian-ducheyne-a1821722b/" target="_blank"><i
+                    class="fa-brands fa-linkedin-in fa-8x"></i></a>
+            <a href="https://twitter.com/kiwi_dch" target="_blank"><i class="fa-brands fa-twitter fa-8x"></i></a>
         </div>
 
         <div class="rellax adjective" data-rellax-speed="5">
@@ -42,25 +51,35 @@
             <p id="independent">Independent</p>
             <p id="adaptability">Adaptability</p>
             <p id="teamwork">Teamwork</p>
-            <!--not a adjective but nsm j'ai improvisé, on va dire que c'est le nom du layer-->
-            <img src="images/kiwi-falling.png" id="kiwis">
-            <img src="images/kiwi.png" id="kiwi">
-            <img src="images/rl-ball.png" id="rl-ball">
-            <img src="images/crab.png" id="crab">
-
         </div>
 
-        <div id="presentation">
-        <h1>Let me introduce myself</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et malesuada lorem. Cras vestibulum tellus quis tempor tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean finibus leo ex, ac tempor urna tincidunt a. Nulla facilisi. Curabitur et ante nec velit gravida tempus. Aenean blandit eleifend porttitor. Quisque ipsum tellus, mollis eu porta id, bibendum interdum felis. Duis cursus sit amet neque et iaculis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In scelerisque purus fringilla commodo egestas. Ut commodo ante velit, eget cursus magna efficitur ac. Mauris in porta nunc. Duis non tortor magna. </p>
+        <div id="about-me-content">
+            <img id="profile-img" src="images/kiwi-static.png">
+            <div id="presentation">
+                <h1>Let me introduce myself</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et malesuada lorem. Cras vestibulum
+                    tellus quis tempor tincidunt. Orci varius natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. Aenean finibus leo ex, ac tempor urna tincidunt a. Nulla facilisi. Curabitur
+                    et ante nec velit gravida tempus. </p>
+            </div>
         </div>
-        </ul>
     </div>
 
     <div id="Projects">
         <div class="shark">
-            <div class="shark-box">
+            <img id="sharkpoll-img" src="images/sharkpoll-2.png" alt="image of sharkpoll poll result">
+            <div class="layer-2 rellax" data-rellax-speed="18">
+                <div id="text-shark-box">
                 <h2>Sharkpoll</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et malesuada lorem. Cras vestibulum
+                    tellus quis tempor tincidunt. Orci varius natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus.</p>
+                </div>
+                <img id="sharkpoll-img-2" src="images/sharkpoll.png" alt="image of sharkpoll">
+            </div>
+            <div class="shark-object rellax"data-rellax-speed="5">
+                <img id="blahaj" src="images/blahaj.png">
+                <img id="ballot" src="images/letter.png">
             </div>
             <!--Rajouter image-->
         </div>
@@ -115,20 +134,23 @@
     </div>
 
     <div id="Contact">
-        <div class="rellax mail-objects" data-rellax-speed="5">
+        <!--<div class="rellax mail-objects" data-rellax-speed="5">
             <img src="images/mailbox.png" id="mailbox">
             <img src="images/letter-white.png" id="letter-white">
             <img src="images/letter-white.png" id="letter-white3">
         </div>
         <div class="rellax mail-objects" data-rellax-speed="18">
             <img src="images/letter-white.png" id="letter-white2">
-        </div>
-        <form id="mail-form" method="post" action="#">
-            <h1>do you wanna write me a letter?</h1>
+        </div>-->
+        <form id="mail-form">
+            <h1>you have not sent a mail?</h1>
             <input id="mail-letter" type="text" name="email" placeholder="EMAIL ADRESS" spellcheck=”false”>
-            <textarea id="area-letter" name="contactContent"  spellcheck=”false” rows="10" cols="20" aria-required="true" placeholder="Your Message Here"></textarea>
-            <input id="send-button" type="submit" name="sendButton" value="Send The Message" disabled>
+            <textarea id="area-letter" name="contactContent" spellcheck=”false” rows="10" cols="20" aria-required="true"
+                placeholder="Your Message Here"></textarea>
+            <input id="send-button" type="button" name="sendButton" value="Send The Message" onclick="send_mail()"
+                disabled>
         </form>
+        <p id="reponse-mail"></p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
