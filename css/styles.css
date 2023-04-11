@@ -327,16 +327,6 @@ h2{
     width: 50%;
 }
 
-@font-face {
-    font-family: LilGrotesk;
-    src: url("../fonts/LilGrotesk-Regular.otf");
-}
-
-@font-face {
-    font-family: LilGrotesk;
-    src: url("../fonts/LilGrotesk-Bold.otf");
-    font-weight: bold;
-}
 
 @font-face {
     font-family: Source Code Pro;
