@@ -4,6 +4,7 @@
 
 <head>
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/kiwi-static.png">
     <script src="https://kit.fontawesome.com/858cf22e5a.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <link href="https://fonts.cdnfonts.com/css/berthold-city" rel="stylesheet">
@@ -13,6 +14,7 @@
         })();
     </script>
     <script defer src="js/active-button.js"></script>
+    <script defer src="js/url.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Elian Ducheyne</title>
@@ -27,8 +29,8 @@
                         <h1>Elian Ducheyne</h1>
                         <ul class="header-menu">
                             <li><a href="#AboutMe-anchor">About me</a></li>
-                            <li><a href="#Projects">Projects</a></li>
-                            <li><a href="files/cv.pdf">Curriculum vitae</a></li>
+                            <li><a href="#Project-anchor">Projects</a></li>
+                            <li><a href="files/cv.pdf" target="_blank">Curriculum vitae</a></li>
                             <li><a href="#Contact">Contact</a></li>
                         </ul>
                     </div>
@@ -38,74 +40,110 @@
     </div>
     <a id="AboutMe-anchor"></a>
     <div id="AboutMe">
-        <div class="rellax network" data-rellax-speed="18">
+        <div class="rellax network" data-rellax-speed="25">
             <a href="https://github.com/KiwiDch" target="_blank"><i class="fa-brands fa-github fa-8x"></i></a>
             <a href="https://www.linkedin.com/in/elian-ducheyne-a1821722b/" target="_blank"><i
                     class="fa-brands fa-linkedin-in fa-8x"></i></a>
             <a href="https://twitter.com/kiwi_dch" target="_blank"><i class="fa-brands fa-twitter fa-8x"></i></a>
         </div>
 
-        <div class="rellax adjective" data-rellax-speed="5">
-            <p id="curious">Curious</p>
-            <p id="perseverance">Perseverance</p>
-            <p id="independent">Independent</p>
-            <p id="adaptability">Adaptability</p>
-            <p id="teamwork">Teamwork</p>
+        <div class="rellax words" data-rellax-speed="8">
+            <p id="word1">Curious</p>
+            <p id="word4">Video Games</p>
+            <p id="word2">Independent</p>
+            <p id="word3">Programming</p>
+            <p id="word5">Sleeping</p>
         </div>
 
         <div id="about-me-content">
             <img id="profile-img" src="images/kiwi-static.png">
             <div id="presentation">
                 <h1>Let me introduce myself</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et malesuada lorem. Cras vestibulum
-                    tellus quis tempor tincidunt. Orci varius natoque penatibus et magnis dis parturient montes,
-                    nascetur ridiculus mus. Aenean finibus leo ex, ac tempor urna tincidunt a. Nulla facilisi. Curabitur
-                    et ante nec velit gravida tempus. </p>
+                <p>I am Elian. I was born in Compiègne, France, on September 19, 2003 and I am 19 years old
+                    today.<br><br>
+                    After having obtained my baccalaureate STI2D with honors, I decided to continue my studies in the
+                    field of computer science. So I chose to integrate a computer science BUT, specializing in
+                    "Deployment of communicating and secure applications" with the aim of working in the field of cybersecurity<br><br>
+                </p>
             </div>
         </div>
     </div>
 
+    <a id="Project-anchor"></a>
     <div id="Projects">
         <div class="shark">
-            <img id="sharkpoll-img" src="images/sharkpoll-2.png" alt="image of sharkpoll poll result">
-            <div class="layer-2 rellax" data-rellax-speed="18">
+            <img draggable="false" id="sharkpoll-img" src="images/sharkpoll-2.png" alt="image of sharkpoll poll result"
+                onclick="openURL('https:\/\/github.com/orgs/SAE-Vote-Reseau/repositories')">
+            <div class="layer-2 rellax" data-rellax-speed="25">
                 <div id="text-shark-box">
-                <h2>Sharkpoll</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et malesuada lorem. Cras vestibulum
-                    tellus quis tempor tincidunt. Orci varius natoque penatibus et magnis dis parturient montes,
-                    nascetur ridiculus mus.</p>
+                    <h2>Sharkpoll</h2>
+                    <p>Sharkpoll is a secure voting software written in Java that uses the El Gamal cryptosystem and a
+                        zero-knowledge proof protocol to encrypt ballots and TLS to encrypt exchanges.
+                        The encryption of the ballots allows users' votes to be truly anonymous.
+                        This project was realized during my 3rd and 4th semester training.
+                    </p>
                 </div>
-                <img id="sharkpoll-img-2" src="images/sharkpoll.png" alt="image of sharkpoll">
+                <img onclick="openURL('https:\/\/github.com/orgs/SAE-Vote-Reseau/repositories')" draggable="false"
+                    id="sharkpoll-img-2" src="images/sharkpoll.png" alt="image of sharkpoll">
             </div>
-            <div class="shark-object rellax"data-rellax-speed="5">
-                <img id="blahaj" src="images/blahaj.png">
-                <img id="ballot" src="images/letter.png">
+            <div class="shark-object rellax" data-rellax-speed="8">
+                <img draggable="false" id="blahaj" src="images/blahaj.png">
+                <img draggable="false" id="ballot" src="images/letter.png">
+                <img draggable="false" id="lock" src="images/lock.png">
+                <img draggable="false" id="ballotbox" src="images/ballotbox.png">
             </div>
             <!--Rajouter image-->
         </div>
 
         <div class="time">
-            <div class="time-box">
-                <h2>TimeBomb</h2>
+            <div class="layer-0 rellax" data-rellax-speed="-6">
+                <img onclick="openURL('https:\/\/rebeloteequipe3.itch.io/cgj-rebelote-timebomb')" draggable="false"
+                    id="TimeBomb-img" src="images/TB.jpg" alt="image of timebomb">
             </div>
-            <!--Rajouter image-->
-        </div>
-        <div class="rails">
-            <div class="rails-box">
-                <h2>Les aventuriers du rails</h2>
+            <img draggable="false" id="bomb" src="images/bomb.png" alt="bomb timebomb">
+            <img draggable="false" id="p1" src="images/fall-p1.png" alt="amogus timebomb">
+            <img draggable="false" id="p2" src="images/fall-p2.png" alt="p2 timebomb">
+            <img draggable="false" id="box-tb" src="images/Boxe.png" alt="box timebomb">
+
+            <div class="layer-2-tb rellax" data-rellax-speed="8">
+                <img draggable="false" id="trophy" src="images/trophy.png" alt="Trophy 7e code game jam">
+                <img draggable="false" id="explosion" src="images/explosion.png" alt="explosion">
+                <img onclick="openURL('https:\/\/rebeloteequipe3.itch.io/cgj-rebelote-timebomb')" draggable="false" id="TimeBomb-img-2" src="images/TB2.jpg" alt="2th image of timebomb">
+                <div id="text-timebomb-box">
+                    <h2>TimeBomb</h2>
+                    <p>Time bomb is a 2D arena game playable in local multiplayer where the goal is to pass the bomb to
+                        his opponent before it explodes. This game was developed with the Unity game engine during the
+                        7th edition of the Code game Jam. By developing this game in 30 hours maximum, our team
+                        "Rebelote" obtained the public prize and the honorable mention.</p>
+                </div>
             </div>
-            <!--Rajouter image-->
+
         </div>
-        <div class="scrabble">
-            <div class="scrabble-box">
+    </div>
+    <div id="Others-Projects">
+        <h1 id="title-others">Others Projects</h1>
+        <div class="rails-box row">
+            <div class="description rails">
+                <h2>Ticket to ride</h2>
+                <p>Ticket to ride is a project I had to realize for the 2nd semester of my training during the year
+                    2022. The goal was to reprogram the board game using Java and JavaFX.</p>
+            </div>
+            <img id="img-rails" src="images/ticket-to-rope.jpg">
+        </div>
+        <div class="scrabble-box row">
+            <img id="img-scrabble" src="images/scrabble.png">
+
+            <div class="description scrabble">
                 <h2>Scrabble</h2>
-                <!-- a remplir-->
+                <p>The Scrabble game is a project that I did during the first semester of my training in the year 2021.
+                    The goal was to reprogram the scrabble game in Java and using the terminal to display it.</p>
             </div>
-            <!--Rajouter image-->
         </div>
     </div>
 
-    <div id="Skills">
+
+
+    <!-- <div id="Skills">
         <div class="skills-box">
             <div class="skills-menu">
                 <div class="category">Software Development</div>
@@ -116,34 +154,22 @@
         </div>
         <div class="skills-content">
             <div class="skills-list">
-                <!-- a remplir-->
             </div>
 
             <div class="skills-list">
-                <!-- a remplir-->
             </div>
 
             <div class="skills-list">
-                <!-- a remplir-->
             </div>
 
             <div class="skills-list">
-                <!-- a remplir-->
             </div>
         </div>
-    </div>
+    </div>-->
 
     <div id="Contact">
-        <!--<div class="rellax mail-objects" data-rellax-speed="5">
-            <img src="images/mailbox.png" id="mailbox">
-            <img src="images/letter-white.png" id="letter-white">
-            <img src="images/letter-white.png" id="letter-white3">
-        </div>
-        <div class="rellax mail-objects" data-rellax-speed="18">
-            <img src="images/letter-white.png" id="letter-white2">
-        </div>-->
         <form id="mail-form">
-            <h1>you have not sent a mail?</h1>
+            <h1>Send me a mail</h1>
             <input id="mail-letter" type="text" name="email" placeholder="EMAIL ADRESS" spellcheck=”false”>
             <textarea id="area-letter" name="contactContent" spellcheck=”false” rows="10" cols="20" aria-required="true"
                 placeholder="Your Message Here"></textarea>
@@ -153,9 +179,14 @@
         <p id="reponse-mail"></p>
     </div>
 
+    <div id="Footer">
+        <p>This website is still under construction and may cause problems adapting to the screen size</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script>
-        var rellax = new Rellax('.rellax');
+        window.onload = function () {
+            var rellax = new Rellax('.rellax');
+        }
     </script>
 </body>
 

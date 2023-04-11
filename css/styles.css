@@ -1,7 +1,7 @@
 #Header {
     background-image: url("../images/background.png");
     background-size: cover;
-    margin-bottom: 20%;
+    margin-bottom: 10%;
     font-family: Roboto Slab;
 }
 
@@ -37,6 +37,13 @@ a {
     letter-spacing: 1px;
 }
 
+#Header a {
+    font-family: Roboto Slab;
+    color: rgba(255,255,255,0.5);
+    font-weight: bold;
+}
+
+
 #about-me-content{
     display: flex;
     flex-direction: row;
@@ -53,18 +60,26 @@ a {
     top: 45px;
     margin-right: 5%;
     transform: scaleX(-1);
-    background-color: #5c5c5c;
+    /*background-color: #5c5c5c;*/
     border-radius: 50%;
+    box-shadow: 0px 0px 10px rgb(80,80,80);
 }
 
 .shark{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30%;
+}
+
+.time {
+    margin-bottom: 80%;
 }
 
 #sharkpoll-img{
-    max-width: 720px;
+    /*max-width: 720px;*/
+    width: 50vw;
+    cursor: pointer;
 }
 
 .layer-2{
@@ -77,35 +92,169 @@ a {
 }
 
 #blahaj{
-    max-width: 350px;
+    /*max-width: 350px;*/
+    width: 24.3vw;
     transform: rotate(125deg);
     position: absolute;
     left: 15%;
-    top:900px;
+    top:1410px;
+    filter: brightness(60%);
+    z-index: 1;
+    pointer-events: none; 
+
 }
 
-#ballot {
-    max-width: 70px;
+#lock {
+    /*max-width: 100px;*/
+    width: 6.95vw;
     transform: rotate(-40deg);
     position: absolute;
     left: 65%;
-    top:950px;
+    top:1460px;
+    filter:brightness(75%);
+    z-index: 1;
+    pointer-events: none; 
 }
+
+#ballot {
+   /*max-width: 140px;*/
+   width: 7.7vw;
+   transform: rotate(25deg);
+   position: absolute;
+   left: 28%;
+   top:2090px;
+   filter: brightness(50%);
+   z-index: 1;
+
+}
+
+
+#ballotbox {
+    /*max-width: 140px;*/
+    width: 15vw;
+    transform: rotate(112deg);
+    position: absolute;
+    left: 63%;
+    top:2130px;
+    filter: brightness(50%);
+    z-index: 1;
+ }
 
 #text-shark-box{
     position: absolute;
     max-width: 350px;
     padding: 15px;
     border-radius: 15px;
-    left: 60%;
-    top: 3200px;
+    left: 62%;
+    top: 4200px;
+}
+
+#text-timebomb-box{
+    max-width: 350px;
+    position: absolute;
+    left: 12%;
+    top:3920px;
+    z-index: 1;
 }
 
 #sharkpoll-img-2{
     position: absolute;
-    max-width: 720px;
+    /*max-width: 720px;*/
+    width: 50vw;
     left: 5%;
-    top: 4250px;
+    top: 5565px;
+    cursor: pointer;
+}
+
+#TimeBomb-img{
+    position: relative;
+    /*max-width: 720px;*/
+    width: 50vw;
+    top: -715px;
+    filter: brightness(85%);
+    cursor: pointer;
+}
+
+#TimeBomb-img-2 {
+    position: absolute;
+    width: 40vw;
+    top: 3625px;
+    left: 53%;
+    z-index: 1;
+    filter: brightness(87%);
+    cursor: pointer;
+}
+
+#bomb {
+    position: absolute;
+    width: 20vw;
+    top: 3380px;
+    left: 11%;
+    transform: rotate(-80deg);
+    image-rendering: pixelated;
+    filter: brightness(75%);
+    pointer-events: none; 
+}
+
+#p1 {
+    position: absolute;
+    width: 8vw;
+    top: 3200px;
+    left: 23%;
+    transform: rotate(-35deg);
+    image-rendering: pixelated;
+    filter: brightness(75%);
+    pointer-events: none; 
+}
+
+#p2 {
+    position: absolute;
+    width: 8vw;
+    top: 2880px;
+    left: 36%;
+    image-rendering: pixelated;
+    filter: brightness(75%);
+    transform: scaleX(-1) rotate(20deg);
+    pointer-events: none; 
+}
+
+#box-tb {
+    position: absolute;
+    width: 8vw;
+    top: 3230px;
+    left: 54%;
+    image-rendering: pixelated;
+    filter: brightness(75%);
+    transform: rotate(10deg);
+    pointer-events: none; 
+}
+
+#trophy {
+    position: absolute;
+    width: 15vw;
+    top: 3000px;
+    left: 66%;
+    transform: rotate(-40deg);
+    filter: brightness(80%);
+    pointer-events: none; 
+}
+
+#explosion {
+    position: absolute;
+    width: 40vw;
+    top: 3050px;
+    left: 37%;
+    transform: rotate(0deg);
+    filter: brightness(80%);
+    image-rendering: pixelated;
+    pointer-events: none; 
+}
+
+.layer-0 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 h2{
@@ -119,6 +268,63 @@ h2{
     align-items: center;
     height: 100%;
     width: 100%;
+}
+
+#Footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+#Others-Projects{
+    margin-top:125%;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20%;
+}
+
+#Others-Projects h2{
+    font-size: 190%;
+    margin-top: 1.5%;
+}
+
+#title-others {
+    font-size: 320%;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+    margin-top: 12%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rails-box {
+    margin-top: 25%;
+}
+
+
+#img-rails{
+    width: 20vw;
+    margin: 2%;
+    margin-right: 0;
+}
+
+#img-scrabble{
+    width: 20vw;
+    margin: 2%;
+    margin-left: 0;
+}
+
+.description{
+    width: 50%;
 }
 
 @font-face {
@@ -145,7 +351,7 @@ h2{
 
 #mail-form {
     text-align: center;
-    font-family: Berthold City;
+    font-family: Roboto Slab;
     color: aliceblue;
     display: flex;
     flex-direction: column;
@@ -158,8 +364,7 @@ h2{
 }
 
 #Contact * {
-    font-family: Berthold City; /*a changer parce que c'est payant e nfait putin de merde ca me casse les couilles pourquoi c'est toujrous comme ca j'en ait trop malrre c'est dure le front de merfde la vite il mfaut que je fasse du rust sinoin c'est la merde la àitrjeekf kxzlqksl q quOIUCUOUBEHHHHHH*/
-
+    font-family: Roboto Slab;
 }
 #reponse-mail {
     margin-top: 0;
@@ -188,7 +393,7 @@ textarea {
     margin-right: 0;
     padding-left: 5px;
     font-size: 22px;
-    font-family: Berthold City;
+    font-family: Roboto Slab;
 }
 
 #mail-form textarea {
@@ -196,8 +401,7 @@ textarea {
 }
 
 #mail-form h1 {
-    font-style: italic;
-    font-weight: 700;
+    font-weight: bold;
     text-align: center;
     letter-spacing: 1px;
     padding-bottom: 0;
@@ -240,6 +444,7 @@ textarea {
     }
 }
 
+
 body,
 html,
 #Header {
@@ -254,15 +459,38 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
 #Header h1 {
-    color: white;
+    color: rgba(255,255,255,0.8);
     margin-top: 0px;
-    font-size: 700%;
+    font-size: 7em;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 0;
 }
 
+/*@media(max-width: 1150px){
+    #Header h1{
+        font-size: 650%;
+    }
+
+    #Header li {
+        font-size: 180%;
+    }
+}
+
+@media(max-width: 1040px){
+    #Header h1{
+        font-size: 600%;
+    }
+
+    #Header li {
+        font-size: 150%;
+    }
+}*/
 
 
 .header-content {
@@ -273,10 +501,7 @@ body {
 }
 
 .header-menu li {
-    display: inline;
     text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
     font-size: 200%;
 
 }
@@ -287,10 +512,15 @@ body {
 }
 
 .header-menu {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 140px;
+    margin-right: 140px;
     padding-left: 0;
     padding-right: 0;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
 
 }
 
@@ -304,7 +534,14 @@ body {
     display: block;
     position: relative;
     visibility: hidden;
-    top: -300px;
+    top: -25%;
+}
+
+#Project-anchor{
+    display: block;
+    position: relative;
+    visibility: hidden;
+    top: -15%;
 }
 
 #AboutMe {
@@ -335,136 +572,74 @@ body {
 
 .network .fa-github {
     left: 50%;
-    top: 1550px;
+    top: 2200px;
+    font-size: 8.9vw;
 }
 
 .network .fa-twitter {
     left: 65%;
-    top: 2100px;
+    top: 2700px;
+    font-size: 8.9vw;
 }
 
 .network .fa-linkedin-in {
     left: 25%;
-    top: 2000px;
+    top: 2600px;
+    font-size: 8.9vw;
 }
 
 i {
     color: white;
 }
 
-.adjective {
+.words {
     width: 100%;
     height: 100%;
 }
 
-.adjective * {
+.words * {
     position: absolute;
     overflow: hidden;
 }
 
-.adjective p {
-    font-size: 200%;
+.words p {
+    font-size: 2.2vw;
 }
 
-#curious {
+#word1 {
     left: 27%;
-    top: 370px;
+    top: 660px;
     transform: rotate(-20deg);
 }
 
-#independent{
+#word2{
     left: 68%;
-    top: 710px;
+    top: 1045px;
     transform: rotate(15deg);
 }
 
-#adaptability{
+#word3{
     left: 43%;
-    top: 770px;
+    top: 1040px;
     transform: rotate(-15deg);
 }
 
-#perseverance{
+#word4{
     left: 66%;
-    top: 330px;
+    top: 615px;
     transform: rotate(20deg);
 }
 
-#teamwork{
+#word5{
     left: 14%;
-    top: 650px;
-    transform: rotate(20deg);
-}
-
-#kiwis {
-    width: 300px;
-    left: 22%;
     top: 950px;
-}
-
-#kiwi {
-    width: 130px;
-    left: 53%;
-    top: 230px;
-    transform: rotate(60deg);
-}
-
-#rl-ball{
-    width: 190px;
-    left: 18%;
-    top: 480px;
-}
-
-#crab{
-    width: 130px;
-    left: 70%;
-    top: 500px;
-    transform: rotate(-210deg);
-}
-
-.mail-objects{
-    width: 100%;
-    height: 100%;
-}
-
-.mail-objects > *{
-    position: absolute;
-    width: 250px;
-}
-
-.mail-objects #mailbox {
-    width: 320px;
-    left: 53%;
-    top: 700px;
-    transform: rotate(130deg);
-}
-.mail-objects #letter-white {
-    width: 80px;
-    left: 25%;
-    top: 1050px;
-    transform: rotate(-120deg);
-}
-
-.mail-objects #letter-white2 {
-    width: 150px;
-    left: 68%;
-    top: 3250px;
-    transform: rotate(140deg);
-}
-.mail-objects #letter-white3 {
-    width: 80px;
-    left: 35%;
-    top: 600px;
-    transform: rotate(76deg);
-}
-
-.mail-objects #pen {
-    width: 80px;
-    left: 55%;
-    top: 400px;
-    transform: rotate(23deg); 
+    transform: rotate(20deg);
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.scrabble {
+    text-align: right;
 }

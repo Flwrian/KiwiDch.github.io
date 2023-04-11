@@ -37,12 +37,12 @@ function validateEmail(input) {
 function send_mail(){
     emailjs.sendForm('service_w3kior6', 'template_t1zq61g', "#mail-form")
                     .then(function() {
-                        reponse.innerText = "The message has been sent"
+                        reponse.textContent = "The message has been sent"
                         text.value = "";
                         mail.value = "";
                         update_button();
                     }, function(error) {
-                        reponse.innerText = "There was an error, try again"
+                        reponse.textContent = "There was an error, try again"
                     });
   }
 
